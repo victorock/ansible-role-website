@@ -1,0 +1,19 @@
+---
+- name: "Ensure the state of {{ website_dir }} as folder with proper ownership"
+  file:
+    path: "{{ website_dir }}"
+    owner: "{{ website_user_owner }}"
+    group: "{{ website_user_group }}"
+    state: directory
+
+- name: "Build index and save to {{ website_dir }}/index.php"
+  template:
+    src: "templates/index.php.j2"
+    dest: "{{ website_dir }}/index.php"
+
+- name: "Copy application files to {{ website_dir }}"
+  copy:
+    src: files/
+    dest: "{{ website_dir }}"
+    owner: "{{ website_user_owner }}"
+    group: "{{ website_user_group }}"

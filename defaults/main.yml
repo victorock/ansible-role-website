@@ -1,0 +1,8 @@
+---
+# defaults file for .
+website_name: website
+website_version: 0.1
+website_path: "/var/www/html"
+website_user_owner: "httpd"
+website_user_group: "httpd"
+website_database_pool: "db"

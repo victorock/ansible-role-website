@@ -1,0 +1,3 @@
+---
+# vars file for .
+website_database_servers: "{{ groups[website_database_pool] | list }}"

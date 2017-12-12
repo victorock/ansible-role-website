@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: victorock
+  description: Website
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.4
+  platforms:
+    - name: ALL
+      versions:
+        - ALL
+  galaxy_tags:
+    - webapp
+
+dependencies: []
